@@ -13,6 +13,7 @@ export default function hideAllPoppers(excludeTippy) {
     if (!tippy) return
 
     const { options } = tippy
+    if (!options) return
 
     if (
       (options.hideOnClick === true || options.trigger.indexOf('focus') > -1) &&
