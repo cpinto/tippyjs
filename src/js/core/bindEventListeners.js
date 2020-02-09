@@ -89,7 +89,11 @@ export default function bindEventListeners(useCapture) {
   const onWindowResize = () => {
     toArray(document.querySelectorAll(selectors.POPPER)).forEach(popper => {
       const tippyInstance = popper._tippy
-      if (tippyInstance && tippyInstance.options && !tippyInstance.options.livePlacement) {
+      if (
+        tippyInstance &&
+        tippyInstance.options &&
+        !tippyInstance.options.livePlacement
+      ) {
         tippyInstance.popperInstance.scheduleUpdate()
       }
     })

@@ -648,9 +648,9 @@ export function _setFollowCursorListener() {
  */
 export function _makeSticky() {
   const applyTransitionDuration = () => {
-    this.popper.style[prefix('transitionDuration')] = `${
-      this.options.updateDuration
-    }ms`
+    this.popper.style[
+      prefix('transitionDuration')
+    ] = `${this.options.updateDuration}ms`
   }
 
   const removeTransitionDuration = () => {
